@@ -1,5 +1,3 @@
-import addScore from './modules/score';
-
 import './style.css';
 
 const scores = [
