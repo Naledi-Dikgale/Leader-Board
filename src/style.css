@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  padding: 0.25em 0.5em;
+  border-radius: 6px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+/* body {
+  width: 100vw;
+  height: 100vh;
+} */
+
+body > h1 {
+  padding: 1em;
+}
+
+/* Recent Scores */
+.recent-scores,
+.add-scores {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 2em;
+}
+
+.recent-scores-header {
+  justify-content: space-between;
+}
+
+.score-list {
+  border: 2px solid rgb(75, 72, 72);
+  margin: 1em 0;
+}
+
+.scrore-list-item {
+  padding: 0.5em;
+}
+
+.scrore-list-item:nth-child(even) {
+  background-color: rgb(254, 200, 242);
+}
+
+.recent-scores-header,
+.score-list {
+  width: 100%;
+}
+
+/* New Score */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+form > input {
+  margin: 1em 0;
+  padding: 0.5em;
+}
+
+form > button {
+  margin: 1em 0;
+  align-self: flex-end;
+}
