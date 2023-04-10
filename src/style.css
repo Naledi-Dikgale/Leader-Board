@@ -17,11 +17,6 @@ button {
   display: flex;
 }
 
-/* body {
-  width: 100vw;
-  height: 100vh;
-} */
-
 body > h1 {
   padding: 1em;
 }
