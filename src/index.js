@@ -34,14 +34,4 @@ window.addEventListener('load', () => {
   refresh.addEventListener('click', () => {
     displayScore(scores);
   });
-  const addNewScore = document.getElementById('add-new-score');
-  addNewScore.addEventListener('click', (e) => {
-    e.preventDefault();
-    const inputName = document.getElementById('input-name');
-    const inputScore = document.getElementById('input-score');
-    addScore(inputName.value, inputScore.value, scores);
-    inputName.value = '';
-    inputScore.value = '';
-    displayScore(scores);
-  });
 });
