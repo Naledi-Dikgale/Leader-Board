@@ -1,4 +1,4 @@
-import addScore from './modules/score.js';
+import addScore from './modules/score';
 
 import './style.css';
 
