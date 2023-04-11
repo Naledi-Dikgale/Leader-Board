@@ -29,7 +29,7 @@ const createGame = async () => {
   const postobj = await postResponse.json();
   localStorage.setItem('gameId', postobj.result.split(' ')[3].toString());
   const gid = localStorage.getItem('gameId');
-  console.log(gid);
+  return (gid);
 };
 
 const createScore = async () => {
@@ -48,8 +48,8 @@ const createScore = async () => {
 
   const postobj = await postResponse.json();
 
-  console.log(postobj);
-  displayScore();
+  return (postobj);
+//   displayScore();
 };
 
 export { createGame, createScore, displayScore };
