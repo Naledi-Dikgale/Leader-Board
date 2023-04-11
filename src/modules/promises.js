@@ -49,7 +49,6 @@ const createScore = async () => {
   const postobj = await postResponse.json();
 
   return (postobj);
-//   displayScore();
 };
 
 export { createGame, createScore, displayScore };
