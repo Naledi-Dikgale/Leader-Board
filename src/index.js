@@ -1,12 +1,11 @@
 import './style.css';
-import {createGame, createScore, displayScore} from './modules/promises.js'
-import {refresh, btn,addScore} from './modules/elements.js'
+import { createGame, createScore, displayScore } from './modules/promises';
+import { refresh, btn, addScore } from './modules/elements';
 
-
-addScore.addEventListener('click',(event)=>{
-    event.preventDefault();
-    createScore();
-})
+addScore.addEventListener('click', (event) => {
+  event.preventDefault();
+  createScore();
+});
 
 displayScore();
 refresh.onclick = displayScore;

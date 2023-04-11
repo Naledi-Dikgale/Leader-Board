@@ -5,4 +5,6 @@ const user = document.getElementById('user');
 const addScore = document.getElementById('insertScore');
 const scoreList = document.getElementById('score-list');
 
-export {refresh, btn, score, user, addScore, scoreList}
+export {
+  refresh, btn, score, user, addScore, scoreList,
+};
