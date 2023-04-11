@@ -34,7 +34,7 @@
 
 
 
-**Leader -project** is a project to showcase my html,CSS and javascript skills applied in bulding a todo-list
+**Leader -project** Leaderboard is a simple project build to consume the leaderboard API. A user can add their name and their score which then will be displayed on the list of the existing scores.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -61,7 +61,6 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## 💻 Getting Started <a name="getting-started"></a>

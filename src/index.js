@@ -1,5 +1,3 @@
-import addScore from './modules/score.js';
-
 import './style.css';
 
 const scores = [
@@ -32,16 +30,6 @@ window.addEventListener('load', () => {
   displayScore(scores);
   const refresh = document.getElementById('refresh');
   refresh.addEventListener('click', () => {
-    displayScore(scores);
-  });
-  const addNewScore = document.getElementById('add-new-score');
-  addNewScore.addEventListener('click', (e) => {
-    e.preventDefault();
-    const inputName = document.getElementById('input-name');
-    const inputScore = document.getElementById('input-score');
-    addScore(inputName.value, inputScore.value, scores);
-    inputName.value = '';
-    inputScore.value = '';
     displayScore(scores);
   });
 });
