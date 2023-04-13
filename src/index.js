@@ -7,6 +7,10 @@ addScore.addEventListener('click', (event) => {
   createScore();
 });
 
-displayScore();
-refresh.onclick = displayScore;
-btn.onclick = createGame;
+window.addEventListener('load', () => {
+  displayScore(scores);
+  const refresh = document.getElementById('refresh');
+  refresh.addEventListener('click', () => {
+    displayScore(scores);
+  });
+});
