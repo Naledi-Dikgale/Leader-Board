@@ -1,30 +1,11 @@
 import './style.css';
+import { createGame, createScore, displayScore } from './modules/promises';
+import { refresh, btn, addScore } from './modules/elements';
 
-const scores = [
-  {
-    name: 'Gift',
-    score: 1,
-  },
-  {
-    name: 'Thoriso',
-    score: 2,
-  },
-  {
-    name: 'TJ',
-    score: 7,
-  },
-];
-
-const displayScore = (scores) => {
-  const scoreList = document.getElementById('score-list');
-  scoreList.innerHTML = '';
-  scores.forEach((scoreListItem) => {
-    const scoreItem = document.createElement('li');
-    scoreItem.className = 'scrore-list-item';
-    scoreItem.innerHTML = `Name: ${scoreListItem.name}`;
-    scoreList.appendChild(scoreItem);
-  });
-};
+addScore.addEventListener('click', (event) => {
+  event.preventDefault();
+  createScore();
+});
 
 window.addEventListener('load', () => {
   displayScore(scores);
