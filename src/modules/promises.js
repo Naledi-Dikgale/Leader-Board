@@ -1,54 +1,51 @@
-import { score, user, scoreList } from './elements';
+import {
+  scoreList, url,
+} from './elements';
+import 'regenerator-runtime/runtime';
+
+const scoreForm = document.getElementById('scoreForm');
+const inputName = document.getElementById('input-name');
+const inputScore = document.getElementById('input-score');
 
 const displayScore = async () => {
-  const scores = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/id:${localStorage.getItem('gameId')}/scores/`);
-  const scoreobj = await scores.json();
-  scoreList.innerHTML = '';
-  scoreobj.result.forEach((scoreListItem) => {
-    const scoreItem = document.createElement('li');
-    scoreItem.className = 'scrore-list-item';
-    scoreItem.innerHTML = `Name: ${scoreListItem.user} <br/> Score: ${scoreListItem.score}`;
-    scoreList.appendChild(scoreItem);
+  try {
+    await fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        data.result.forEach((game) => {
+          const scoreItem = document.createElement('li');
+          scoreItem.className = 'scrore-list-item';
+          scoreItem.innerHTML = `Name: ${game.user} <br/> Score: ${game.score}`;
+          scoreList.appendChild(scoreItem);
+        });
+      });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const createScore = () => {
+  scoreForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    try {
+      await fetch(url, {
+        method: 'POST',
+        headers: {
+          // eslint-disable-next-line quote-props
+          'Accept': 'application/json, text/plain, */*',
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          user: inputName.value,
+          score: inputScore.value,
+        }),
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    document.getElementById('input-name').value = '';
+    document.getElementById('input-score').value = '';
   });
 };
 
-const createGame = async () => {
-  const inp = document.querySelector('.gameName');
-  const request = {
-    method: 'POST',
-    body: JSON.stringify({
-      name: inp.value.toString(),
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  };
-
-  const postResponse = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', request);
-
-  const postobj = await postResponse.json();
-  localStorage.setItem('gameId', postobj.result.split(' ')[3].toString());
-  const gid = localStorage.getItem('gameId');
-  return (gid);
-};
-
-const createScore = async () => {
-  const request = {
-    method: 'POST',
-    body: JSON.stringify({
-      user: user.value.toString(),
-      score: score.value.toString(),
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  };
-
-  const postResponse = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/id:${localStorage.getItem('gameId')}/scores/`, request);
-
-  const postobj = await postResponse.json();
-
-  return (postobj);
-};
-
-export { createGame, createScore, displayScore };
+export { createScore, displayScore };

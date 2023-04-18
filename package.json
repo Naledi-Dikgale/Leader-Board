@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.21.2",
+    "@types/regenerator-runtime": "^0.13.1",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
     "eslint": "^7.32.0",
@@ -34,6 +35,7 @@
     "express": "^4.18.2",
     "jest-environment-jsdom": "^29.5.0",
     "lodash": "^4.17.21",
+    "regenerator-runtime": "^0.13.11",
     "webpack-dev-middleware": "^6.0.2"
   }
 }

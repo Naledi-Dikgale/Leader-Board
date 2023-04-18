@@ -1,10 +1,8 @@
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/id:57841632/scores/';
 const refresh = document.getElementById('refresh');
-const btn = document.getElementById('postGame');
-const score = document.getElementById('score');
-const user = document.getElementById('user');
 const addScore = document.getElementById('insertScore');
 const scoreList = document.getElementById('score-list');
 
 export {
-  refresh, btn, score, user, addScore, scoreList,
+  refresh, addScore, scoreList, url,
 };
