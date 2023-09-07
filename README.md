@@ -55,8 +55,8 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **[Add_header]**
-- **[Add_styling]**
+- **[Displays Sccores]**
+- **[Beautiful_UI]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
