@@ -110,7 +110,7 @@ open index.html in your browser
 
 - GitHub: [@Naledi-Dikgale](https://github.com/Naledi-Dikgale)
 - LinkedIn: [naledi-dikgale-068423159](https://www.linkedin.com/in/naledi-dikgale-068423159/)
-- Website: [https://nalediportfolio.netlify.app/]
+- Website: [@Naledi-Dikgale](https://nalediportfolio.netlify.app/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
