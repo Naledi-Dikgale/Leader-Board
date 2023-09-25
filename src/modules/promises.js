@@ -7,6 +7,32 @@ const scoreForm = document.getElementById('scoreForm');
 const inputName = document.getElementById('input-name');
 const inputScore = document.getElementById('input-score');
 
+// Add an event listener to the input field
+inputScore.addEventListener('input', (e) => {
+  const inputValue = e.target.value;
+  // Use a regular expression to allow only numbers
+  const numericInput = inputValue.replace(/[^0-9]/g, '');
+  // Update the input field value
+  e.target.value = numericInput;
+});
+
+// const clearButton = document.getElementById('clear');
+// // Add an event listener to the clear button
+
+// clearButton.addEventListener('click', async () => {
+//   try {
+//     // Send a request to the server to clear the data
+//     await fetch('clear-score-endpoint', {
+//       method: 'DELETE', // Use the appropriate HTTP method for clearing data
+//     });
+
+//     // Clear the score list on the client-side
+//     document.getElementById('score-list').innerHTML = '';
+//   } catch (error) {
+//     console.error(error);
+//   }
+// });
+
 const displayScore = async () => {
   try {
     await fetch(url)
