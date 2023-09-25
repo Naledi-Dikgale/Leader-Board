@@ -87,3 +87,9 @@ form > button {
   margin: 1em 0;
   align-self: flex-end;
 }
+
+@media screen and (max-width: 375px) {
+  .d-flex {
+    flex-direction: column;
+  }
+}
