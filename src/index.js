@@ -1,5 +1,5 @@
 import './style.css';
-import { refresh } from './modules/elements';
+import { refresh, clear } from './modules/elements';
 import { createScore, displayScore } from './modules/promises';
 
 window.addEventListener('load', () => {
@@ -11,3 +11,7 @@ refresh.addEventListener('click', () => {
   displayScore();
 });
 createScore();
+
+clear.addEventListener('click', () => {
+  document.getElementById('score-list').innerHTML = '';
+});
