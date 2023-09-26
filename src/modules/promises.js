@@ -42,7 +42,13 @@ const displayScore = async () => {
           const scoreItem = document.createElement('li');
           scoreItem.className = 'scrore-list-item';
           scoreItem.innerHTML = `Name: ${game.user} <br/> Score: ${game.score}`;
-          scoreList.appendChild(scoreItem);
+          if (game.score === 0) {
+            scoreItem.innerHTML = '';
+          }
+
+          else if (parseInt(game.score)) {
+            scoreList.appendChild(scoreItem);
+          }
         });
       });
   } catch (error) {
