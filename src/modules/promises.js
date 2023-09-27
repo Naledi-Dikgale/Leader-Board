@@ -16,23 +16,6 @@ inputScore.addEventListener('input', (e) => {
   e.target.value = numericInput;
 });
 
-// const clearButton = document.getElementById('clear');
-// // Add an event listener to the clear button
-
-// clearButton.addEventListener('click', async () => {
-//   try {
-//     // Send a request to the server to clear the data
-//     await fetch('clear-score-endpoint', {
-//       method: 'DELETE', // Use the appropriate HTTP method for clearing data
-//     });
-
-//     // Clear the score list on the client-side
-//     document.getElementById('score-list').innerHTML = '';
-//   } catch (error) {
-//     console.error(error);
-//   }
-// });
-
 const displayScore = async () => {
   try {
     await fetch(url)
