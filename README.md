@@ -55,8 +55,8 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **[Add_header]**
-- **[Add_styling]**
+- **[Displays Sccores]**
+- **[Beautiful_UI]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,6 +111,7 @@ open index.html in your browser
 - GitHub: [@Naledi-Dikgale](https://github.com/Naledi-Dikgale)
 - LinkedIn: [naledi-dikgale](https://www.linkedin.com/in/naledi-dikgale/)
 - Website: [naledi-dikgale](https://naledi.netlify.app)
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
