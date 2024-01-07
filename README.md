@@ -109,8 +109,9 @@ open index.html in your browser
 👤 **Naledi Dikgale**
 
 - GitHub: [@Naledi-Dikgale](https://github.com/Naledi-Dikgale)
-- LinkedIn: [@naledi-dikgale](https://www.linkedin.com/in/naledi-dikgale)
-- Website: [@Naledi-Dikgale](https://nalediportfolio.netlify.app/)
+- LinkedIn: [naledi-dikgale](https://www.linkedin.com/in/naledi-dikgale/)
+- Website: [naledi-dikgale](https://naledi.netlify.app)
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
